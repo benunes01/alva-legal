@@ -1,0 +1,197 @@
+/* Alva — folhas de estilo das páginas legais. Mesmo design system
+   dos emails transacionais (cores #F37D33 / #FFFBF7 / #1F1812). */
+
+:root {
+  --alva-surface: #FFFBF7;
+  --alva-surface-card: #FFFFFF;
+  --alva-on-surface: #1F1812;
+  --alva-on-surface-muted: #6B5D52;
+  --alva-on-surface-faint: #8A7B6F;
+  --alva-accent: #F37D33;
+  --alva-divider: #EFE6DC;
+  --alva-shadow: rgba(31, 24, 18, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --alva-surface: #1F1812;
+    --alva-surface-card: #2A211B;
+    --alva-on-surface: #FFFBF7;
+    --alva-on-surface-muted: #B5A89C;
+    --alva-on-surface-faint: #8A7B6F;
+    --alva-accent: #F89B5C;
+    --alva-divider: #3A2F26;
+    --alva-shadow: rgba(0, 0, 0, 0.4);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--alva-surface);
+  color: var(--alva-on-surface);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  scroll-behavior: smooth;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+header.alva-header {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+header.alva-header .brand {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--alva-accent);
+  font-weight: 700;
+}
+
+header.alva-header h1 {
+  font-family: 'Fraunces', 'Georgia', serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 8px 0 4px;
+  color: var(--alva-on-surface);
+}
+
+header.alva-header .meta {
+  font-size: 13px;
+  color: var(--alva-on-surface-faint);
+}
+
+article {
+  background: var(--alva-surface-card);
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 1px 3px var(--alva-shadow);
+}
+
+article h2 {
+  font-family: 'Fraunces', 'Georgia', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 32px 0 8px;
+  color: var(--alva-on-surface);
+}
+
+article h2:first-child { margin-top: 0; }
+
+article h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 4px;
+  color: var(--alva-on-surface);
+}
+
+article p {
+  margin: 12px 0;
+  color: var(--alva-on-surface);
+}
+
+article ul, article ol {
+  padding-left: 24px;
+  margin: 8px 0;
+}
+
+article li {
+  margin: 4px 0;
+}
+
+article a {
+  color: var(--alva-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  font-weight: 500;
+}
+
+article a:hover {
+  text-decoration-thickness: 2px;
+}
+
+article strong { color: var(--alva-on-surface); }
+
+article hr {
+  border: 0;
+  border-top: 1px solid var(--alva-divider);
+  margin: 32px 0;
+}
+
+article table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+article th, article td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--alva-divider);
+  vertical-align: top;
+}
+
+article th {
+  font-weight: 600;
+  color: var(--alva-on-surface-muted);
+}
+
+footer.alva-footer {
+  text-align: center;
+  margin-top: 48px;
+  font-size: 13px;
+  color: var(--alva-on-surface-faint);
+}
+
+footer.alva-footer a { color: var(--alva-on-surface-muted); }
+
+.toc {
+  background: var(--alva-surface);
+  border-left: 3px solid var(--alva-accent);
+  padding: 16px 20px;
+  margin: 24px 0 32px;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+}
+
+.toc strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--alva-on-surface-muted);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 20px;
+  columns: 2;
+  column-gap: 24px;
+}
+
+.toc a {
+  text-decoration: none;
+  color: var(--alva-on-surface);
+}
+
+.toc a:hover { color: var(--alva-accent); }
+
+@media (max-width: 600px) {
+  main { padding: 24px 16px 64px; }
+  article { padding: 28px 20px; }
+  header.alva-header h1 { font-size: 28px; }
+  .toc ol { columns: 1; }
+}
