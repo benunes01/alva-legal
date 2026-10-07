@@ -14,7 +14,7 @@
     <header class="alva-header">
       <div class="brand">Alva</div>
       <h1>Política de Privacidade</h1>
-      <p class="meta">Versão 1.0 · Vigência a partir de 13 de maio de 2026 · Última revisão: 13 de maio de 2026</p>
+      <p class="meta">Versão 1.1 · Vigência a partir de 8 de outubro de 2026 · Última revisão: 8 de outubro de 2026</p>
     </header>
 
     <article>
@@ -50,7 +50,8 @@
       <h3>2.1 Dados do(a) cuidador(a) — pessoa adulta que cria a conta</h3>
       <ul>
         <li><strong>E-mail</strong> e, quando você quiser, <strong>nome de exibição</strong>.</li>
-        <li>Em caso de <em>login com Apple</em> ou <em>Google</em>: identificador único do provedor (ID), e-mail (ou e-mail oculto da Apple), e nome se você autorizar.</li>
+        <li>Se você entrar com a <em>Apple</em>: identificador único do provedor, e-mail (ou o e-mail oculto da Apple) e nome, se você autorizar.</li>
+        <li>Situação do Alva Plus: plano, data de compra e de renovação. Quem processa o pagamento é a Apple; não recebemos dados do cartão.</li>
         <li>Idioma e fuso horário do dispositivo (para mostrar conteúdo no formato certo).</li>
       </ul>
 
@@ -60,7 +61,9 @@
         <li>Sexo, se você optar por informar.</li>
         <li>Semanas de prematuridade, quando aplicável (usado só para calcular idade corrigida).</li>
         <li>Marcos de desenvolvimento registrados (motor, social, linguagem, cognitivo, fino) — com data e observações que <em>você</em> escolher escrever.</li>
-        <li>Fotos e áudios anexados aos marcos (opcional — você decide o que anexar).</li>
+        <li>Fotos e áudios anexados aos marcos e ao Diário (opcional; você decide o que anexar).</li>
+        <li>Memórias do Diário: texto, foto, áudio e categoria, quando você escreve.</li>
+        <li>Perfil de saúde que você escolher preencher: alergias, medicações, condições e contatos do pediatra.</li>
         <li>Vacinas aplicadas, datas e foto do comprovante (opcional).</li>
         <li>Medições de peso, altura e perímetro cefálico, com data.</li>
         <li>Atividades realizadas (registro opcional).</li>
@@ -70,9 +73,8 @@
       <h3>2.3 Dados técnicos do dispositivo</h3>
       <ul>
         <li>Modelo do aparelho, versão do sistema operacional, versão do app.</li>
-        <li>Identificadores não persistentes para crash reports (anônimos).</li>
         <li>Endereço IP em chamadas ao servidor (não é armazenado de forma permanente; usado apenas para segurança e prevenção de abuso).</li>
-        <li>Token de notificações push, quando você ativar notificações (armazenado vinculado à sua conta).</li>
+        <li>Lembretes de vacina e de mesversário são calculados e agendados no próprio aparelho. O Alva não usa notificações push e não envia esses dados a terceiros.</li>
       </ul>
 
       <h3>2.4 O que <em>não</em> coletamos</h3>
@@ -93,10 +95,10 @@
           <tr><td>Permitir múltiplos cuidadores na mesma família</td><td>E-mail de convite, papel do cuidador (responsável principal ou cuidador).</td></tr>
           <tr><td>Acompanhar marcos, vacinas, crescimento e atividades</td><td>Dados da criança fornecidos por você.</td></tr>
           <tr><td>Gerar relatório em PDF para apresentar ao pediatra</td><td>Dados da criança, marcos, medições, dúvidas registradas.</td></tr>
-          <tr><td>Enviar lembretes (vacinas próximas, marcos esperados)</td><td>Token de push, datas e dados da criança.</td></tr>
+          <tr><td>Lembretes de vacina e mesversário (agendados no aparelho)</td><td>Data de nascimento e vacinas registradas, usadas só no seu aparelho.</td></tr>
+          <tr><td>Liberar o Alva Plus para você e sua família</td><td>Identificador da conta e histórico de compras recebido da Apple via RevenueCat.</td></tr>
           <tr><td>Convidar outro(a) cuidador(a) por e-mail</td><td>E-mail do destinatário e nome da família.</td></tr>
           <tr><td>Garantir segurança e prevenir abuso</td><td>IP em chamadas, logs anonimizados.</td></tr>
-          <tr><td>Diagnosticar erros e melhorar o app</td><td>Crash reports anonimizados, versão do app e do SO.</td></tr>
         </tbody>
       </table>
 
@@ -117,11 +119,9 @@
         </thead>
         <tbody>
           <tr><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a></td><td>Banco de dados, autenticação, armazenamento de fotos e áudios</td><td>São Paulo (BR) — região sa-east-1</td></tr>
-          <tr><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Cloud Messaging</a> (Google)</td><td>Envio de notificações push</td><td>Estados Unidos</td></tr>
           <tr><td><a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend</a></td><td>Envio de e-mails transacionais (magic link, convites, recuperação)</td><td>Estados Unidos</td></tr>
-          <tr><td><a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry</a></td><td>Captura anonimizada de erros para diagnóstico (sem PII)</td><td>Estados Unidos</td></tr>
-          <tr><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a></td><td>App Store, Sign In with Apple — quando você escolhe esse provedor</td><td>Estados Unidos</td></tr>
-          <tr><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td><td>Google Play, Sign In with Google — quando você escolhe esse provedor</td><td>Estados Unidos</td></tr>
+          <tr><td><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat</a></td><td>Gestão das compras do Alva Plus: recebe da Apple o histórico de compras ligado ao identificador da sua conta (sem nome, sem dados de saúde, sem cartão)</td><td>Estados Unidos</td></tr>
+          <tr><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a></td><td>App Store e pagamento do Alva Plus; Iniciar sessão com a Apple, quando você escolhe esse provedor</td><td>Estados Unidos</td></tr>
         </tbody>
       </table>
       <p>Eventualmente compartilhamos dados se exigido por autoridade competente (ordem judicial, requisição do Ministério Público, etc.) — sempre nos limites da lei.</p>
@@ -131,8 +131,7 @@
       <ul>
         <li><strong>Banco de dados, fotos, áudios e relatórios PDF do(a) seu(sua) bebê</strong> ficam armazenados no Brasil (São Paulo).</li>
         <li><strong>E-mails transacionais</strong> são processados pela Resend nos Estados Unidos. Apenas o e-mail destinatário e o conteúdo do e-mail (que você ou o sistema gera) trafegam.</li>
-        <li><strong>Notificações push</strong> usam Firebase Cloud Messaging (Google, EUA). Apenas o conteúdo curto da notificação e um identificador anônimo do dispositivo.</li>
-        <li><strong>Crash reports</strong> são enviados ao Sentry (EUA), com filtros para remover qualquer dado pessoal identificável.</li>
+        <li><strong>Compras do Alva Plus</strong> são processadas pela Apple e registradas pelo RevenueCat (EUA), ligadas apenas ao identificador da sua conta.</li>
       </ul>
       <p>Todos esses prestadores aderem aos padrões internacionais de proteção de dados (Standard Contractual Clauses ou Data Processing Agreements com cláusulas equivalentes à LGPD).</p>
 
@@ -140,16 +139,15 @@
       <p>Mantemos seus dados pelo tempo em que sua conta estiver ativa. Você pode:</p>
       <ul>
         <li><strong>Pedir exclusão da conta a qualquer momento</strong> dentro do app (em <em>Mais → Configurações → Excluir conta</em>) ou por e-mail.</li>
-        <li>Após a solicitação, todos os dados associados à sua conta — incluindo os do(a) bebê — são apagados em até <strong>15 dias corridos</strong> dos nossos sistemas ativos.</li>
+        <li>A exclusão é <strong>imediata</strong> nos nossos sistemas ativos, inclusive fotos, áudios e PDFs. Se a família tiver outros cuidadores, os dados da criança continuam com eles, e só os seus dados pessoais são apagados; se você for a única pessoa da família, tudo é apagado.</li>
         <li>Cópias de segurança (backups) podem reter dados por mais até 30 dias, exclusivamente para fins de recuperação em desastre, sem acesso operacional.</li>
-        <li>Crash reports anonimizados são mantidos por até 90 dias e descartados depois.</li>
       </ul>
 
       <h2 id="direitos">8. Seus direitos como titular dos dados</h2>
       <p>A LGPD (Art. 18) garante a você, e à criança que você representa, os seguintes direitos. Todos são exercidos gratuitamente:</p>
       <ul>
         <li><strong>Confirmação</strong> de que tratamos seus dados.</li>
-        <li><strong>Acesso</strong> aos dados — disponível dentro do app (em <em>Mais → Privacidade → Baixar meus dados</em>; recebe um arquivo em até 15 dias).</li>
+        <li><strong>Acesso</strong> aos dados — disponível dentro do app (em <em>Mais → Privacidade → Baixar meus dados</em>; o arquivo fica pronto na hora).</li>
         <li><strong>Correção</strong> de dados incompletos, inexatos ou desatualizados — também direto no app.</li>
         <li><strong>Anonimização, bloqueio ou eliminação</strong> de dados desnecessários, excessivos ou tratados em desconformidade.</li>
         <li><strong>Portabilidade</strong> a outro fornecedor de serviço — exportamos seus dados em formato JSON aberto.</li>
@@ -176,7 +174,7 @@
       <ul>
         <li>O Alva é destinado a <strong>adultos (18 anos ou mais)</strong> que são <strong>responsáveis legais</strong> pela criança cadastrada (pais, mães, avós com guarda legal, tutores).</li>
         <li>Ao criar a conta, você declara, sob sua responsabilidade, ser maior de idade e responsável legal pela criança.</li>
-        <li>Você pode adicionar até 4 cuidadores adicionais (totalizando 5 por família). Cada um receberá um convite por e-mail e deverá aceitar antes de ter acesso.</li>
+        <li>A família pode ter até 2 cuidadores no plano grátis e até 5 no Alva Plus. Cada pessoa recebe um convite no próprio e-mail e só tem acesso depois de aceitar, entrando com esse mesmo e-mail.</li>
         <li>Os dados da criança são tratados exclusivamente no <strong>melhor interesse dela</strong>: acompanhamento de desenvolvimento, comunicação com o pediatra e suporte aos cuidadores. Nunca para fins de marketing, perfilamento comportamental ou venda.</li>
       </ul>
 
@@ -185,7 +183,7 @@
       <ul>
         <li>Armazenamento local seguro do dispositivo para guardar sua sessão de login.</li>
         <li>Cache local de algumas listas (catálogo de marcos, vacinas) para o app funcionar offline.</li>
-        <li>Token do Firebase Cloud Messaging quando você habilita notificações.</li>
+        <li>Lembretes agendados no próprio aparelho, quando você permite notificações.</li>
       </ul>
       <p>Você pode apagar tudo isso a qualquer momento desinstalando o app ou usando "Excluir conta".</p>
 

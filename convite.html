@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Convite para acompanhar uma criança no Alva.">
+  <title>Convite — Alva</title>
+  <link rel="stylesheet" href="_styles.css">
+  <style>
+    .actions { display: flex; flex-direction: column; gap: 12px; margin: 28px 0 8px; }
+    .btn { display: block; text-align: center; padding: 14px 18px; border-radius: 16px;
+           font-weight: 600; text-decoration: none; font-size: 17px; }
+    .btn-primary { background: var(--alva-accent); color: #fff; }
+    .btn-secondary { border: 1px solid var(--alva-divider); color: var(--alva-on-surface);
+                     background: var(--alva-surface-card); }
+    .steps { padding-left: 20px; }
+    .steps li { margin-bottom: 8px; }
+    .note { color: var(--alva-on-surface-muted); font-size: 15px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="alva-header">
+      <div class="brand">Alva</div>
+      <h1>Você recebeu um convite</h1>
+      <p class="meta">Para acompanhar uma criança junto com a família no Alva.</p>
+    </header>
+
+    <article>
+      <p>No Alva a família acompanha marcos, vacinas, crescimento e as dúvidas da próxima consulta no mesmo lugar. Quem convidou você escolheu se você pode registrar coisas ou só acompanhar.</p>
+
+      <div class="actions">
+        <a id="abrir" class="btn btn-primary" href="#">Abrir o convite no Alva</a>
+        <a class="btn btn-secondary" href="https://apps.apple.com/app/id6769541523">Baixar o Alva na App Store</a>
+      </div>
+      <p class="note" id="status"></p>
+
+      <h2>Ainda não tem o app?</h2>
+      <ol class="steps">
+        <li>Baixe o Alva na App Store.</li>
+        <li>Crie a conta com <strong>o mesmo e-mail que recebeu o convite</strong>.</li>
+        <li>O Alva encontra o convite sozinho e pergunta se você quer entrar na família.</li>
+      </ol>
+      <p class="note">O convite vale por 7 dias. Se expirar, peça um novo para quem convidou.</p>
+    </article>
+
+    <footer class="alva-footer">
+      <p><a href="privacidade.html">Política de Privacidade</a> · <a href="termos.html">Termos de Uso</a></p>
+      <p>Alva é desenvolvido por BeCaptain Studio · <a href="mailto:ola@becaptainstudio.com">ola@becaptainstudio.com</a></p>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var token = (params.get('t') || '').replace(/[^A-Za-z0-9_-]/g, '');
+      var abrir = document.getElementById('abrir');
+      var status = document.getElementById('status');
+      if (!token) {
+        abrir.style.display = 'none';
+        status.textContent = 'Este link está incompleto. Peça para quem convidou enviar de novo.';
+        return;
+      }
+      var deepLink = 'alva://invite/' + token;
+      abrir.href = deepLink;
+      // Tenta abrir o app direto. Se ele não estiver instalado, a página
+      // continua aqui e os passos abaixo explicam o caminho.
+      if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+        window.location.href = deepLink;
+      }
+    })();
+  </script>
+</body>
+</html>
